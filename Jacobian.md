@@ -35,9 +35,15 @@ dependence parameter.
 Hyperparameters were transformed to the internal scale $\theta$ as:
 
 $$
-\theta = \log { ( \tau ) } \\
-\theta = \mathrm{logit}(\frac{\rho+1}{2}) \\
-\theta = \mathrm{logit}(\lambda) \text{.} \\
+\theta = \log { ( \tau ) }
+$$
+
+$$
+\theta = \mathrm{logit}(\frac{\rho+1}{2})
+$$
+
+$$
+\theta = \mathrm{logit}(\lambda) \text{.}
 $$
 
 Each Jacobian is shown below.
@@ -50,10 +56,12 @@ probability density function of $\tau$ is given by:
 
 $$
 f(\tau; a, b) = \text{Gamma}(a, b) = \frac{b^a}{\Gamma(a)} \tau^{a-1} e^{-b\tau}, \quad \text{for } \tau > 0.
-$$ Considering the variable transformation $\theta = \log(\tau)$, the
-log prior needs to be provided on the internal scale ($\theta$) instead
-of the parameter scale ($\tau$). Since $\tau = e^\theta$, the Jacobian
-is given by:
+$$
+
+Considering the variable transformation $\theta = \log(\tau)$, the log
+prior needs to be provided on the internal scale ($\theta$) instead of
+the parameter scale ($\tau$). Since $\tau = e^\theta$, the Jacobian is
+given by:
 
 $$
 \frac{\mathrm{d}\tau}{\mathrm{d}\theta} = \frac{\mathrm{d}}{\mathrm{d}\theta}(e^\theta) = e^\theta.
