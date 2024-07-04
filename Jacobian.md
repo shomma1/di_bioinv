@@ -70,7 +70,7 @@ $$
 The density function on the internal scale is:
 
 $$
-f(\theta; a, b) = f(\tau; a, b) \left|\frac{d\tau}{d\theta}\right| = \text{Gamma}(a, b) \cdot e^\theta.
+f(\theta; a, b) = f(\tau; a, b) \frac{d\tau}{d\theta} = \text{Gamma}(a, b) \cdot e^\theta.
 $$
 
 Therefore, the log prior density on the parameter scale has
@@ -84,7 +84,7 @@ $\rho = \frac{e^\theta-1}{1+e^\theta}$, the Jacobian is given by:
 
 $$
 \begin{align*}
-\left|\frac{\mathrm{d}\rho}{\mathrm{d}\theta}\right| &= 
+\frac{\mathrm{d}\rho}{\mathrm{d}\theta} &= 
 \frac{\mathrm{d}}{\mathrm{d}\theta} \left( \frac{e^{\theta}-1}{1 + e^{\theta}} \right) \\
 &=  \frac{ e^{\theta}(1+e^{\theta})-(e^\theta-1)e^{\theta} }{ (1 + e^{\theta})^2 } \\
 &=  \frac{ 2e^{\theta} }{ (1 + e^{\theta})^2 } \\
@@ -106,7 +106,7 @@ $\lambda = \frac{1}{1+e^{-\theta}}$, the Jacobian is given by:
 
 $$
 \begin{align*}
-\left|\frac{ \mathrm{d}\lambda }{ \mathrm{d}\theta}\right| &= 
+\frac{ \mathrm{d}\lambda }{ \mathrm{d}\theta} &= 
 \frac{ \mathrm{d} }{ \mathrm{d}\theta } \left( \frac{ 1 }{ 1+e^{-\theta} } \right) \\
 &= \frac{ e^{-\theta} }{ (1+e^{-\theta})^2 } \\
 &= \frac{ 1 }{ 1+e^{-\theta} } \frac {e^{-\theta}}{1+e^{-\theta}}     \\
