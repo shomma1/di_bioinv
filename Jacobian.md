@@ -7,9 +7,7 @@ needs to be added to the log prior density.
 The precision matrix *Q* of the multivariate Leroux model is specified
 as:
 
-$$
-\Q=\Lambda\otimes\\(1-\lambda)I+\lambda(D-W)\\
-$$
+*Q* = *Λ* ⊗ {(1−*λ*)*I* + *λ*(*D*−*W*)}
 
 where *Λ* is defined as:
 
