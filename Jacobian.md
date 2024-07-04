@@ -27,11 +27,11 @@ is the correlation parameter, and *λ* is the spatial dependence
 parameter.
 
 Hyperparameters were transformed to the internal scale *θ* as:
-*θ* = log (*τ*)
 $$
-\theta = \mathrm{logit}(\frac{\rho+1}{2})
+\theta = \log { ( \tau ) } \\
+\theta = \mathrm{logit}(\frac{\rho+1}{2}) \\
+\theta = \mathrm{logit}(\lambda) \text{.} \\
 $$
-*θ* = logit(*λ*).
 
 Each Jacobian is shown below.
 
@@ -44,8 +44,8 @@ probability density function of *τ* is given by:
 $$
 f(\tau; a, b) = \text{Gamma}(a, b) = \frac{b^a}{\Gamma(a)} \tau^{a-1} e^{-b\tau}, \quad \text{for } \tau &gt; 0.
 $$
-Considering the variable transformation *θ* = log (*τ*), the log prior
-needs to be provided on the internal scale (*θ*) instead of the
+Considering the variable transformation $\theta = \log(\tau)\\$, the log
+prior needs to be provided on the internal scale (*θ*) instead of the
 parameter scale (*τ*). Since *τ* = *e*<sup>*θ*</sup>, the Jacobian is
 given by:
 
