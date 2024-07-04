@@ -1,3 +1,5 @@
+# Jacobian of a Variable Transformation
+
 The `rgeneric` model in INLA requires defining the function which
 returns the log prior density for internal scale *θ*. So, the Jacobian
 needs to be added to the log prior density.
@@ -31,7 +33,7 @@ $$
 
 Each Jacobian is shown below.
 
-# Precision *τ*
+## Precision *τ*
 
 Assuming that the prior distribution of the precision *τ* follows a
 Gamma distribution with shape parameter *a* and rate parameter *b*, the
@@ -58,7 +60,7 @@ $$
 Therefore, the log prior density on the parameter scale has
 log (*e*<sup>*θ*</sup>) = *θ* added to “log.prior”.
 
-# Correlation *ρ*
+## Correlation *ρ*
 
 Correlation parameter was transformed as
 $\theta = \mathrm{logit}(\frac{\rho+1}{2})$. Since
@@ -79,7 +81,7 @@ $$
 \log(2)+\log(e^\theta)-2\log(1+e^\theta) \text{.}
 $$
 
-# Spatial dependence *λ*
+## Spatial dependence *λ*
 
 Spatial dependence paramter *λ* was transformed as *θ* = logit(*λ*).
 Since $\lambda = \frac{1}{1+e^-\theta}$, the Jacobian is given by:
